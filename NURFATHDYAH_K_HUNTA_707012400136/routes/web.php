@@ -16,3 +16,26 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/hello', function () {
+    return 'Hello, Dyah';
+});
+
+Route::get('/user/{name}', function ($name) {
+    return "Nama Saya $name";
+});
+
+Route::get('/greet/{name?}', function ($name = 'Guest') {
+    return "Halo, $name";
+});
+
+Route::get('/profile', function () {
+    return view('profile');
+});
+
+Route::get('/about', function () {
+    return view('about', ['name' => 'Dyah', 'nim' => '707012400136', 'kelas' => 'D4SIKC 48-02']);
+});
+
+Route::get('/home', function () {
+    return 'Halo,Ini adalah halaman Home';
+})->name('home.page');
