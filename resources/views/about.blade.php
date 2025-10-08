@@ -3,4 +3,4 @@
 <p>NIM: {{ $nim }}</p>
 <p>Kelas: {{ $kelas }}</p>
 
-<a href="{{ route('home.page')}}">Kembali ke home</a>
+<a href="{{ route('home.page')}}">Kembali ke home</
