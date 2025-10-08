@@ -6,10 +6,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/nama/{nama}', function ($nama) {
-    return view('panggilnama', ['nama' => $nama]);
+Route::get('/about/{nama}/{nim}/{kelas}', function ($nama, $nim, $kelas) {
+    return view('about', ['nama' => $nama, 'nim' => $nim, 'kelas' => $kelas]);
 });
 
-Route::get('/home', function () {
-    return view('home');
-})->name('home.page');
+// Route::get('/nama/{nama}', function ($nama) {
+//     return view('panggilnama', ['nama' => $nama]);
+// });
+
+// Route::get('/home', function () {
+//     return view('home');
+// })->name('home.page');
