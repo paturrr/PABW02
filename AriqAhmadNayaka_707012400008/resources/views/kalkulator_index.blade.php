@@ -41,36 +41,44 @@
             <td>
                 <button>Hitung</button>
             </td>
+        </tr>
+    </table>
+    </form>
 
-        {{-- <tr>
-            <td>Nilai 1</td>
-            <td>:</td>
+    <br><br>
+    <h2>Bangun datar</h2>
+    <form action="/kalkulator/bangundatar" method="POST">
+        @csrf
+        <table border="1" cellpadding="10" cellspacing="0">
+        <tr>
             <td>
-                <input type="number" name="nilai1">
+                rumus
             </td>
+            <td>nilai1</td>
+            <td>nilai2</td>
+            <td></td>
         </tr>
         <tr>
-            <td>Nilai 2</td>
-            <td>:</td>
             <td>
-                <input type="number" name="nilai2">
-            </td>
-        </tr>
-        <tr>
-            <td>Operator</td>
-            <td>:</td>
-            <td>
-                <select name="operator">
-                    <option value="tambah">+</option>
-                    <option value="kurang">-</option>
-                    <option value="kali">*</option>
-                    <option value="bagi">/</option>
+                <select name="rumus">
+                    <option value="persegi">persegi</option>
+                    <option value="persegipanjang">persegipanjang</option>
+                    <option value="segitiga">segitiga</option>
+                    <option value="lingkaran">lingkaran</option>
                 </select>
             </td>
+            <td>
+            <input type="num" name="nilai1">
+            </td>
+            <td>
+            <input type="num" name="nilai2">
+            </td>
+            <td>
+
+                <button>Kirim</button>
+            </td>
         </tr>
-        <tr>
-            <td><button>Hitung</button></td>
-        </tr> --}}
+        
     </table>
     </form>
 

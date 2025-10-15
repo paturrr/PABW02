@@ -11,6 +11,27 @@ class kalkulator_controller extends Controller
         return view('kalkulator_index');
     }
 
+
+
+    public function bangunDatarHitung(Request $request)
+    {
+
+        dd($request->all());
+        if ($request->rumus == "persegi") {
+            $hasil = $request->input("nilai1") * $request->input("nilai1");
+        } else if ($request->rumus == "persegipanjang") {
+            $hasil = $request->input("nilai1") * $request->input("nilai2");
+        } else if ($request->rumus == "segitiga") {
+            $hasil = $request->input("nilai1") * $request->input("nilai2") / 2;
+        } else if ($request->rumus == "lingkaran") {
+            $hasil = 3.14 * $request->input("nilai1") * $request->input("nilai1");
+        }
+        $rumus = $request->input("rumus");
+        $nilai1 = $request->input("nilai1");
+        $nilai2 = $request->input("nilai2");
+        return view('bangundatar_hasil', compact('hasil', 'rumus', 'nilai1', 'nilai2'));
+    }
+
     public function hitung(Request $request)
     {
         $nilai1 = $request->input('nilai1');

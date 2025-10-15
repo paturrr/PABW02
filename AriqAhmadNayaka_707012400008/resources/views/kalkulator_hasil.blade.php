@@ -33,34 +33,6 @@
             </td>
             <td>{{$nilai2}}</td>
             <td>{{$hasil}}</td>
-        {{-- <tr>
-            <td>Nilai 1</td>
-            <td>:</td>
-            <td>
-                {{$nilai1}}
-            </td>
-        </tr>
-        <tr>
-            <td>Nilai 2</td>
-            <td>:</td>
-            <td>
-                {{$nilai2}}
-            </td>
-        </tr>
-        <tr>
-            <td>Operator</td>
-            <td>:</td>
-            <td>
-                {{$operator}}
-            </td>
-        </tr>
-        <tr>
-            <td>Hasil</td>
-            <td>:</td>
-            <td>
-                {{$hasil}}
-            </td>
-        </tr> --}}
         </tr>
     </table>
     <a href="{{ route('kalkulator.index') }}">Kembali</a>
