@@ -1,7 +1,32 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DataController;
 
+Route::get('form', [DataController::class, 'form']);
+Route::post("/process", [DataController::class, 'process']);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// =================================================================
 Route::get('/', function () {
     return view('welcome');
 });
@@ -17,3 +42,5 @@ Route::get('/about/{nama}/{nim}/{kelas}', function ($nama, $nim, $kelas) {
 // Route::get('/home', function () {
 //     return view('home');
 // })->name('home.page');
+
+// =================================================================
