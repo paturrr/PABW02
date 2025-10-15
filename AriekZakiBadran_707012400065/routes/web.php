@@ -29,3 +29,16 @@ Route::get('/about', function () {
 Route::get('/home', function () {
     return 'Halo, ini adalah halaman Home';
 })->name('home.page');
+
+use App\Http\Controllers\DataController;
+
+Route::get('/form', [DataController::class, 'form']);
+Route::post('/proses', [DataController::class, 'proses']);
+
+use App\Http\Controllers\KalkulatorController;
+Route::get('/index', [KalkulatorController::class, 'index']);
+Route::post('/hitung', [KalkulatorController::class, 'hitung']);
+
+use App\Http\Controllers\BangunDatarController;
+Route::get('/rumus', [BangunDatarController::class, 'rumus']);
+Route::post('/count', [BangunDatarController::class,'count']);
