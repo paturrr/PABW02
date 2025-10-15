@@ -1,6 +1,14 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DataController;
+use App\Http\Controllers\KalkulatorController;
+
+Route::get('/form', [DataController:: class, 'form']);
+Route::POST('/proses', [DataController:: class, 'proses']);
+
+Route::get('/index', [KalkulatorController:: class, 'index'])->name('index');
+Route::POST('/hasil2', [KalkulatorController:: class, 'hitung'])->name('hitung');
 
 /*
 |--------------------------------------------------------------------------
