@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DataController;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,10 +13,22 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+use App\Http\Controllers\BangunDatarController;
+Route::get('/', [BangunDatarController::class, 'indeks'])->name('indeks');
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::post('/persegi-panjang', [BangunDatarController::class, 'persegiPanjang'])->name('persegiPanjang');
+Route::post('/persegi', [BangunDatarController::class, 'persegi'])->name('persegi');
+Route::post('/lingkaran', [BangunDatarController::class, 'lingkaran'])->name('lingkaran');
+
+Route::get('/form', [DataController::class, 'form']);
+Route::post('/proses', [DataController::class, 'proses']); 
+//Kalkulator
+use App\Http\Controllers\KalkulatorController;
+Route::get('/index', [KalkulatorController::class, 'index']);
+Route::post('/hitung', [KalkulatorController::class, 'hitung']);
+//bangundatar
+Route::get('/rumus', [BangunDatarController::class, 'rumus']);
+Route::post('/count', [BangunDatarController::class, 'count']);
 
 Route::get('Hello', function () {
     return "Hello , Arib";
