@@ -4,4 +4,4 @@
 <p>Kelas: {{ $kelas }}</p>
 
 
-<a href="{{ route('home.page')  }}">Kembali ke Home</a>
+<a href="{{ route('home.page')  }}">Kembali ke Home</a>x
