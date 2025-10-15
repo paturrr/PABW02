@@ -1,8 +1,28 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DataController;
+use App\Http\Controllers\KalkulatorController;
 
-Route::get('/', function () {
+Route::get('/form',[DataController::class, 'form']);
+Route::post('/proses',[DataController::class, 'proses']);
+
+Route::get('/input', [KalkulatorController::class, 'input']);
+Route::post('/hasil', [KalkulatorController::class, 'hasil']);
+
+
+Route::get('/pilih', [ShapeController::class, 'pilih']);
+Route::get('/inputPersegi', [ShapeController::class, 'inputPersegi']);
+Route::get('/hasilPersegi', [ShapeController::class, 'hasilPersegi']);
+
+
+
+
+
+
+
+
+/*Route::get('/', function () {
     return view('welcome');
 });
 
@@ -32,4 +52,4 @@ Route :: get('/about', function () {
 
 Route :: get('/home', function () {
     return 'Halo, Ini adalah halaman Home';
-})->name('home.page');
+})->name('home.page');*/
