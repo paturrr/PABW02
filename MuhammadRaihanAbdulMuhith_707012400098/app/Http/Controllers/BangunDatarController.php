@@ -35,13 +35,13 @@ class BangunDatarController extends Controller
                 }
                 break;
 
-             case 'Segiiga':
+            case 'Segitiga':
                 if ($jenis == 'luas') {
-                    $hasil = 0.5 * $nilai1 * $nilai2;
+                     $hasil = 0.5 * $nilai1 * $nilai2;
                 } else {
-                    $hasil = $nilai1 + $nilai2 + sqrt(pow($nilai1,2) + pow($nilai2,2)); 
+                    $hasil = $nilai1 + $nilai2 + sqrt(pow($nilai1, 2) + pow($nilai2, 2));
                 }
-                break;
+            break;
 
              case 'Lingkaran':
                 $pi = 3.14159;
