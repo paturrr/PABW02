@@ -1,8 +1,23 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DataController;
+use App\Http\Controllers\KalkulatorController;
+use App\Http\Controllers\BangunDatarController;
 
-Route::get('/', function () {
+
+Route::get('/rumus', [BangunDatarController::class, 'rumus']);
+Route::post('/count', [BangunDatarController::class,'count']);
+
+
+Route::get('/index', [KalkulatorController::class, 'index']);
+Route::post('/hitung', [KalkulatorController::class, 'hitung']);
+
+
+Route::get('/form', [DataController::class, 'form']);
+Route::post('/proses', [DataController::class, 'proses']);
+
+Route::get('/view', function () {
     return view('welcome');
 });
 
