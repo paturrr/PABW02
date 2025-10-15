@@ -1,6 +1,14 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DataController;
+use App\Http\Controllers\KalkulatorController;
+
+Route::get('/form', [DataController::class, 'form']);
+Route::post('/proses', [DataController::class, 'proses']);
+
+Route::get('/index', [KalkulatorController::class, 'index']);
+Route::post('/hitung', [KalkulatorController::class, 'hitung']);
 
 Route::get('/', function () {
     return view('welcome');
