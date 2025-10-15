@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DataController;
+use App\Http\Controllers\KalkulatorController;
+use App\Http\Controllers\BangunDatarController;
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -29,3 +33,12 @@ Route::get('/about', function () {
 Route::get('/home', function () {
     return 'Halo, ini adalah halaman home';
 })->name('home.page');
+
+Route::get('/form',[DataController::class,'form']);
+Route::post('/proses',[DataController::class,'proses']);
+
+Route::get('/kalkulator', [KalkulatorController::class, 'index'])->name('kalkulator.index');
+Route::post('/hitungkalkulator', [KalkulatorController::class, 'hitung'])->name('kalkulator.hitung');
+
+Route::get('/bangundatar', [BangunDatarController::class, 'bangundatar']);
+Route::post('/hitung', [BangunDatarController::class, 'hitung'])->name('hitung');
