@@ -4,6 +4,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DataController;
 use App\Http\Controllers\KalkulatorController;
 use App\Http\Controllers\ShapeController;
+use App\Http\Controllers\NilaiController;
+
+Route::get('/nilai', [NilaiController::class, 'nilai']);
+Route::post('/hasilnilai', [NilaiController::class, 'hasilnilai']);
 
 Route::get('/index', [KalkulatorController::class, 'index']);
 Route::post('/hitung', [KalkulatorController::class, 'hitung']);

@@ -13,33 +13,36 @@ class ShapeController extends Controller
 
     public function hasil(Request $request)
     {
-        $panjang = $request->input('panjang');
-        $lebar = $request->input('lebar');
-        $radius = $request->input('radius');
-        $hasil = $request->input('hasil');
+        $bangun = $request->bangun;
+        $jenis = $request->jenis;
+        $nilai1 = $request->nilai1;
+        $nilai2 = $request->nilai2 ?? 0;
+        $hasil = 0;
 
-        switch ($operator) {
-            case '+':
-                $hasil = $angka1 + $angka2;
+        switch ($bangun) {
+            case 'persegi':
+                $hasil = ($jenis == 'luas') ? 
+                $nilai1 * $nilai1 : 4 * $nilai1;
                 break;
-            case '-':
-                $hasil = $angka1 - $angka2;
+
+            case 'persegi_panjang':
+                $hasil = ($jenis == 'luas') ? $nilai1 * $nilai2 : 2 * ($nilai1 + $nilai2);
                 break;
-            case '*':
-                $hasil = $angka1 * $angka2;
+
+            case 'lingkaran':
+                $phi = 3.14;
+                $hasil = ($jenis == 'luas') ? $phi * $nilai1 * $nilai1 : 2 * $phi * $nilai1;
                 break;
-            case '/':
-                if ($angka2 == 0) {
-                    $hasil = "tidak bisa dibagi dengan nol.";
+
+            case 'segitiga':
+                if ($jenis == 'luas') {
+                    $hasil = 0.5 * $nilai1 * $nilai2;
                 } else {
-                    $hasil = $angka1 / $angka2; 
+                    $hasil = $nilai1 + $nilai2 + sqrt(($nilai1 ** 2) + ($nilai2 ** 2));
                 }
-                break;
-            default:
-                $hasil = "tidak valid.";
                 break;
         }
 
-        return view('hasil', compact('angka1', 'angka2', 'operator', 'hasil'));
+        return view('hasilshape', compact('bangun', 'jenis', 'nilai1', 'nilai2', 'hasil'));
     }
 }

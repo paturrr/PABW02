@@ -15,6 +15,6 @@ class DataController extends Controller
         $umur = $request -> input('umur');
         $alamat = $request -> input('alamat');
 
-        return view('hasil', compact('nama', 'umur', 'alamat'));
+        return view('hasilform', compact('nama', 'umur', 'alamat'));
     }
 }
