@@ -9,9 +9,9 @@
     <table>
         <tbody>
         <li>{{$pilihdaerah}}</li>
-       <li>{{$cm}}</li>
-        <li>{{$mm}}</li>
-        <li>{{$persen}}</li>
+       <li><p>cm</p>{{$cm}}</li>
+        <li><p>mm</p>{{$mm}}</li>
+        <li><p>persen</p>{{$persen}}</li>
         </tbody>
     </table>
 </body>

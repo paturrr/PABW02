@@ -15,10 +15,14 @@
             <option value="2">Baleendah</option>
             <option value="3">Majalaya</option>
         </select>
+        <br>
+        <label>Cm</label>
         <input type="number" name="cm">
         <br>
+        <label>Mm</label>
         <input type="number" name="mm">
         <br>
+        <label>%</label>
         <input type="number" name="%">
 
         <button type="submit">Submit</button>
