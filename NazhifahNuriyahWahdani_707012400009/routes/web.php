@@ -5,6 +5,7 @@ use App\Http\Controllers\DataController;
 use App\Http\Controllers\KalkulatorController;
 use App\Http\Controllers\BangunDatarController;
 
+
 Route::get('/form', [DataController::class, 'form']);
 Route::post('/proses', [DataController::class, 'proses']);
 
