@@ -1,11 +1,14 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\DataControllers;
-use App\Http\Controllers\KalkulatorController;
+use App\Http\Controllers\SmartFloodController;
+use App\Http\Controllers\DatasensorController;
 
-Route::get('/', [KalkulatorController::class, 'index']);
-Route::post('/hitung', [KalkulatorController::class, 'hitung']);
+Route::get('/home', function () {
+    return view('home');
+});
+Route::get('/form', [DatasensorController::class, 'form']);
+Route::post('/sensor', [DatasensorController::class, 'sensor']);
 
 /*
 |--------------------------------------------------------------------------
@@ -21,7 +24,3 @@ Route::post('/hitung', [KalkulatorController::class, 'hitung']);
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/form',[DataControllers::class,'form']);
-Route::post('/proses',[DataControllers::class, 'proses']);
-Route::get('/', [KalkulatorController::class, 'index']);
-Route::post('/hitung', [KalkulatorController::class, 'hitung']);
