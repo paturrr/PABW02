@@ -14,7 +14,6 @@ Route::post('/hitung', [KalkulatorController::class,'hitung']);
 Route::get('/rumus', [BangunDatarController::class, 'rumus']);
 Route::post('/count', [BangunDatarController::class,'count']);
 
-
 Route::get('/', function () {
     return view('welcome');
 });
