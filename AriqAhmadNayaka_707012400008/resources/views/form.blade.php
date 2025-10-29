@@ -28,7 +28,7 @@
             <td>Alamat</td>
             <td>:</td>
             <td>
-                <textarea name="Alamat"></textarea>
+                <textarea name="alamat"></textarea>
             </td>
         </tr>
         <tr>
