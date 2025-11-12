@@ -18,6 +18,6 @@ class DataController extends Controller
         $umur = $request->input('umur');
         $alamat = $request->input('alamat');
 
-        return view('result', compact('nama', 'umur', 'alamat'));
+        return  ;
     }
 }
